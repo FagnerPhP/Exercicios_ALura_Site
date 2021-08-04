@@ -1,8 +1,10 @@
 var pacientes = document.querySelectorAll(".paciente")
 
-pacientes.forEach(function(paciente){
+var tabela = document.querySelector("#table")
 
-        paciente.addEventListener("dblclick", function(){
-            console.log("Fui Clicado com duplo clique")
-        })
+tabela.addEventListener("dblclick", function(event){
+        let alvoEvento = event.target;
+        var paiDoAlvo = alvoEvento.parentNode
+        paiDoAlvo.remove();
+
 });
